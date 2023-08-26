@@ -6,8 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
+import { BackendLayoutComponent } from './layouts/backend-layout/backend-layout.component';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent, DefaultLayoutComponent, BackendLayoutComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -16,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
